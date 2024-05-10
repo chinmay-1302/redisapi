@@ -1,5 +1,5 @@
 import { Hono } from "hono"
-import { handle } from "hono/cloudflare-pages";
+import { handle } from "hono/vercel";
 
 export const runtime = "edge";
 
@@ -10,3 +10,4 @@ app.get('/search', (c) => {
 })
 
 export const GET = handle(app);
+export default app as never;

@@ -15,6 +15,7 @@ export default function Home() {
 
       const res = await fetch(`/api/search?q=${input}`);
     }
+    fetchData();
   }, [input])
 
   return (
@@ -22,7 +23,7 @@ export default function Home() {
       <input
         value={input}
         onChange={(e) => {
-          setInput(e.target.value)
+          setInput(e.target.value);
         }}
         type="text"
       />
