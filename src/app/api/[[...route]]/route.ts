@@ -1,4 +1,5 @@
 import { Hono } from "hono"
+import { handle } from "hono/cloudflare-pages";
 
 export const runtime = "edge";
 
